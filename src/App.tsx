@@ -1,20 +1,19 @@
 import './App.css'
 import Header from './components/Header'
 import useStore from "./createStore";
+import Map from './api/Map';
 
-interface AppState { 
-  count: number;
-}
 
 function App() {
   const { count, inc } = useStore()
 
   return (
     <>
-    {count}
     <Header /> 
 
+    <p>Awesome count: {count}</p>
     <button onClick={inc}>Increment</button>
+    <Map />
     
     </>
   )
